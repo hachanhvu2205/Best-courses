@@ -9,7 +9,7 @@ jQuery(document).ready(function($) {
         toggleNav();
     });
 
-
+    
     $('.has-children').children('a').on('click', function(event) {
         event.preventDefault();
         var selected = $(this);
