@@ -681,13 +681,14 @@ h3.w3ls-title {
 }
 
 .w3ls-add-grids h4 {
-    font-size: 1.8em;
+    font-size: 2em;
     color: #fff;
     letter-spacing: 2px;
-    padding-top: 3em;
+    padding-top: 3.5em;
     outline: none;
     text-decoration: none;
     line-height: 1.5em;
+    text-align: center;
 }
 
 .w3ls-add-grids h4 span {
