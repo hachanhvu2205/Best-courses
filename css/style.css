@@ -562,7 +562,7 @@ h3.w3ls-title {
     -moz-transform: translate3d(-30%, 0px, 0px);
     -o-transform: translate3d(-30%, 0px, 0px);
     -ms-transform: translate3d(-30%, 0px, 0px);
-    transform: translate3d(-30%, 0px, 0px);
+    transform: translate3d(-70%, 0px, 0px);
 }
 
 .glry-w3agile-grids .view-caption {
@@ -572,7 +572,7 @@ h3.w3ls-title {
     position: absolute;
     right: 0;
     padding: 7% 5% 5% 35%;
-    text-align: left;
+    text-align: right;
     top: 0;
     z-index: 99;
     -webkit-transition: all 0.5s;
@@ -682,7 +682,7 @@ h3.w3ls-title {
 
 .w3ls-add-grids h4 {
     font-size: 2em;
-    color: #fff;
+    color: red;
     letter-spacing: 2px;
     padding-top: 3.5em;
     outline: none;
