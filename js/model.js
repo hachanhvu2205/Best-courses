@@ -1,5 +1,6 @@
 const currentUser = undefined
-
+const listCourses = undefined
+const currentCourse = undefined
 model.register = ({name, email, password }) => {
 
     //console.log(firstName)
@@ -18,6 +19,18 @@ model.register = ({name, email, password }) => {
 }
 
 
-model.getAllCourses = () => {
-    
+model.loadCourses = async () => {
+    const res = await firebase.firestore().collection('courses').get()
+    model.listCourses = getDataFromDocs(res.docs)
+    model.currentCourse = listCourses[0]
 } 
+
+getDataFromDoc = (doc) => {
+    let user = doc.data()
+    user.id = doc.id
+    return user
+}
+
+getDataFromDocs = (docs) => {
+    return docs.map(getDataFromDoc)
+}
