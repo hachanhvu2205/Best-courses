@@ -23,7 +23,7 @@ model.login = (email, password) => {
         if (!firebase.currentUser.emailVerified) {
             alert("Please verify email")
         } else {
-            
+
         }
     })
 }
@@ -32,8 +32,6 @@ model.loadCourses = async () => {
     model.listCourses = getDataFromDocs(res.docs)
     model.currentCourse = listCourses[0]
 }
-
-
 
 getDataFromDoc = (doc) => {
     let user = doc.data()
