@@ -18,12 +18,22 @@ model.register = ({name, email, password }) => {
     })
 }
 
-
+model.login = (email, password) => {
+    firebase.auth().sigsignInWithEmailAndPassword(email, password).then((res) => {
+        if (!firebase.currentUser.emailVerified) {
+            alert("Please verify email")
+        } else {
+            
+        }
+    })
+}
 model.loadCourses = async () => {
     const res = await firebase.firestore().collection('courses').get()
     model.listCourses = getDataFromDocs(res.docs)
     model.currentCourse = listCourses[0]
-} 
+}
+
+
 
 getDataFromDoc = (doc) => {
     let user = doc.data()

@@ -1966,6 +1966,7 @@ h3.w3ls-title.w3ls-title1 {
     float: left;
     padding: 2em;
     border: 1px solid #dadada;
+    height: 181.2px;
 }
 
 .offer-card-grids:nth-child(2) {
@@ -1999,14 +2000,16 @@ h3.w3ls-title.w3ls-title1 {
 }
 
 .offer-bottom-grids-info {
-    background: url(../images/img2.jpg)no-repeat center 0px;
+    background: url(../images/t1.jpg)no-repeat center 0px;
     background-size: cover;
     text-align: right;
+    height: 350px;
 }
 
 .offer-bottom-grids-info2 {
-    background: url(../images/bg2.jpg)no-repeat center 0px;
+    background: url(../images/t2.jpg) center;
     background-size: cover;
+    height: 350px;
 }
 
 .offer-bottom-grids h4 {
