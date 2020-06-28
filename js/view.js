@@ -36,3 +36,4 @@ view.setActiveScreen = async(screenName) => {
                     controller.login(formData)
                 })
                 break
+            case 'indexScreen':
