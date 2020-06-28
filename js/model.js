@@ -1,6 +1,9 @@
+const model = {}
+
 const currentUser = undefined
 const listCourses = undefined
 const currentCourse = undefined
+const currentVideo = undefined
 model.register = ({name, email, password }) => {
 
     //console.log(firstName)
@@ -27,11 +30,17 @@ model.login = (email, password) => {
         }
     })
 }
+
+model.search = (searchKey) => {
+    const res = firebase.firestore().collection('courses').where('title','==',searchKey).get()
+    model.currentCourse = getDataFromDocs(res.docs)[0]
+}
 model.loadCourses = async () => {
     const res = await firebase.firestore().collection('courses').get()
     model.listCourses = getDataFromDocs(res.docs)
     model.currentCourse = listCourses[0]
 }
+
 
 getDataFromDoc = (doc) => {
     let user = doc.data()
