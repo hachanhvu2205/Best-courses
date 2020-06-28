@@ -1,3 +1,5 @@
+const model = {}
+
 const currentUser = undefined
 const listCourses = undefined
 const currentCourse = undefined
@@ -32,6 +34,7 @@ model.loadCourses = async () => {
     model.listCourses = getDataFromDocs(res.docs)
     model.currentCourse = listCourses[0]
 }
+
 
 getDataFromDoc = (doc) => {
     let user = doc.data()
