@@ -1,0 +1,13 @@
+const components = {};
+components.indexScreen = ``
+components.aboutScreen = ``
+components.contactScreen = ``
+components.faqScreen = ``
+components.helpScreen = ``
+components.loginScreen = ``
+components.marketPlace = ``
+components.teacherScreen = ``
+components.privacyScreen = ``
+components.productScreen = ``
+components.signUpScreen = ``
+components.valueScreen = ``
