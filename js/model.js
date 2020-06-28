@@ -14,7 +14,7 @@ model.register = ({name, email, password }) => {
             displayName: name
         })
         //console.log(firebase.auth().currentUser)
-        view.setActiveScreen("loginScreen")
+        //view.setActiveScreen("loginScreen")
     }).catch((err) => {
         //console.log(err)
         alert(err.message)
