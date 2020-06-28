@@ -1,5 +1,5 @@
 const components = {};
-components.indexScreen = `<body>
+components.indexScreen = `
 <div class="header">
     <div class="w3ls-header">
         <div class="w3ls-header-left">
@@ -1535,7 +1535,6 @@ components.indexScreen = `<body>
 </script>
 
 <script src="js/main.js"></script>
-</body>
 `
 components.aboutScreen = ``
 components.contactScreen = ``
