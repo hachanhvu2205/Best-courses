@@ -20,8 +20,8 @@ controller.login = (loginForm) => {
 }
 
 controller.signup = (formData) => {
-    if (!formData.lastName || formData.lastName === "") {
-        controller.setMessageError('error-name', 'Please input last name')
+    if (!formData.name || formData.name === "") {
+        controller.setMessageError('error-name', 'Please input name')
     } else {
         controller.setMessageError('error-name', '')
     }

@@ -1,9 +1,9 @@
 const model = {}
 
-const currentUser = undefined
-const listCourses = undefined
-const currentCourse = undefined
-const currentVideo = undefined
+model.currentUser = undefined
+model.listCourses = undefined
+model.currentCourse = undefined
+model.currentVideo = undefined
 model.register = ({ name, email, password }) => {
 
     //console.log(firstName)
@@ -11,28 +11,30 @@ model.register = ({ name, email, password }) => {
         console.log(res)
         firebase.auth().currentUser.sendEmailVerification()
         firebase.auth().currentUser.updateProfile({
-            displayName: name
-        })
-        //console.log(firebase.auth().currentUser)
-        //view.setActiveScreen("loginScreen")
+                displayName: name
+            })
+            //console.log(firebase.auth().currentUser)
+            //view.setActiveScreen("loginScreen")
     }).catch((err) => {
         //console.log(err)
         alert(err.message)
     })
 }
 
-model.login = (email, password) => {
+model.login = ({ email, password }) => {
     firebase.auth().signInWithEmailAndPassword(email, password).then((res) => {
-        if (!firebase.currentUser.emailVerified) {
+        console.log(res)
+        if (!firebase.auth().currentUser.emailVerified) {
             alert("Please verify email")
         } else {
-
+            view.setActiveScreen('productScreen')
         }
+    }).catch((err) => {
+        alert(err.message)
     })
 }
 
 model.search = (searchKey) => {
-    model.loadCourses()
     const res = firebase.firestore().collection('courses').where('title', '==', searchKey).get()
     model.currentCourse = getDataFromDocs(res.docs)[0]
 }

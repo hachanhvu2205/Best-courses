@@ -1,4 +1,318 @@
 const components = {};
+components.videoScreen = `    <!-- //header -->
+<!-- products -->
+<div class="products">
+    <div class="container">
+        <div class="col-md-12 product-w3ls-right">
+            <!-- breadcrumbs -->
+            <!-- <ol class="breadcrumb breadcrumb1">
+                <li><a href="index.html">Home</a></li>
+                <li class="active">Video</li>
+            </ol> -->
+            <!-- <div class="clearfix"> </div> -->
+            <!-- //breadcrumbs -->
+            <!-- <div class="product-top">
+                <h4>Videos</h4> -->
+            <!-- <ul>
+                    <li class="dropdown head-dpdn">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Filter By<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Latest</a></li>
+                            <li><a href="#">Popular</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown head-dpdn">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Brands<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Primary school</a></li>
+                            <li><a href="#">Secondary school</a></li>
+                            <li><a href="#">Highschool</a></li>
+
+                        </ul>
+                    </li>
+                </ul> -->
+            <!-- <div class="clearfix"> </div>
+            </div> -->
+            <div class="products-row" id="onlyOne">
+                <!-- <div class="col-md-3 product-grids">
+                    <div class="agile-products">
+                        <div class="new-tag">
+                            <h6>20%<br>Off</h6>
+                        </div>
+                        <a><img src="images/e1.png" class="img-responsive" alt="img"></a>
+                        <div class="agile-product-text">
+                            <h5><a>Mr Vu</a></h5>
+                            <h6><del>$200</del> $100</h6>
+                            <form action="#" method="post">
+                                <input type="hidden" name="cmd" value="_cart" />
+                                <input type="hidden" name="add" value="1" />
+                                <input type="hidden" name="w3ls_item" value="Audio speaker" />
+                                <input type="hidden" name="amount" value="100.00" />
+                                <button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</button>
+                            </form>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class="col-md-3 product-grids">
+                    <div class="agile-products">
+                        <div class="new-tag">
+                            <h6>New</h6>
+                        </div>
+                        <a href=""><img src="images/e2.png" class="img-responsive" alt="img"></a>
+                        <div class="agile-product-text">
+                            <h5><a>Mr Tung</a></h5>
+                            <h6><del>$700</del> $300</h6>
+                            <form action="#" method="post">
+                                <input type="hidden" name="cmd" value="_cart" />
+                                <input type="hidden" name="add" value="1" />
+                                <input type="hidden" name="w3ls_item" value="Refrigerator" />
+                                <input type="hidden" name="amount" value="300.00" />
+                                <button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</button>
+                            </form>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class="col-md-3 product-grids">
+                    <div class="agile-products">
+                        <div class="new-tag">
+                            <h6>5% <br> Off</h6>
+                        </div>
+                        <a><img src="images/e3.png" class="img-responsive" alt="img"></a>
+                        <div class="agile-product-text">
+                            <h5><a>Dr Vu</a></h5>
+                            <h6><del>$100</del> $70</h6>
+                            <form action="#" method="post">
+                                <input type="hidden" name="cmd" value="_cart" />
+                                <input type="hidden" name="add" value="1" />
+                                <input type="hidden" name="w3ls_item" value="Smart Phone" />
+                                <input type="hidden" name="amount" value="70.00" />
+                                <button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</button>
+                            </form>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class="col-md-3 product-grids">
+                    <div class="agile-products">
+                        <div class="new-tag">
+                            <h6>New</h6>
+                        </div>
+                        <a><img src="images/e4.png" class="img-responsive" alt="img"></a>
+                        <div class="agile-product-text">
+                            <h5><a>Dr Khiem</a></h5>
+                            <h6><del>$100</del> $80</h6>
+                            <form action="#" method="post">
+                                <input type="hidden" name="cmd" value="_cart" />
+                                <input type="hidden" name="add" value="1" />
+                                <input type="hidden" name="w3ls_item" value="Digital Camera" />
+                                <input type="hidden" name="amount" value="80.00" />
+                                <button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</button>
+                            </form>
+                        </div>
+                    </div>
+                </div> -->
+
+
+            </div>
+
+
+
+            <!-- <div class="clearfix"> </div> -->
+        </div>
+        <!-- add-products -->
+        <!-- <div class="w3ls-add-grids w3agile-add-products">
+                <a href="#">
+                    <h4> Share your knowlegde to save the world</h4>
+                </a>
+            </div> -->
+        <!-- //add-products -->
+    </div>
+    <!-- <div class="col-md-3 rsidebar"> -->
+    <!-- <div class="rsidebar-top"> -->
+    <!-- <div class="slider-left">
+                    <h4>Filter By Price</h4>
+                    <div class="row row1 scroll-pane">
+                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>0 - $100 </label>
+                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>$100 - $200 </label>
+                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>$200 - $250  </label>
+                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>$250 - $300 </label>
+                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>$350 - $400 </label>
+                    </div>
+                </div> -->
+    <!-- <div class="sidebar-row">
+                    <h4>Time</h4>
+                    <div class="row row1 scroll-pane">
+                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Upto - 5h </label>
+                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>4h-5h</label>
+                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>3h-4h </label>
+                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>1h-3h </label>
+                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>30m-1h</label>
+                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>below 30m </label>
+                    </div>
+                </div> -->
+    <!-- </div> -->
+    <!-- <div class="related-row">
+                <h4>YOU MAY ALSO LIKE</h4>
+                <div class="galry-like">
+                    <a href="single.html"><iframe width="215.2" height="150" src="https://www.youtube.com/embed/videoseries?list=PLQeh9OeQXJE8yeX6daJlcOhDWrNjDH-cN" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
+                    <h4><a href="products.html">University entrance exams</a></h4>
+                </div>
+            </div> -->
+    <!-- </div> -->
+    <!-- <div class="clearfix"> </div> -->
+    <!-- <div class="recommend">
+            <h3 class="w3ls-title">COURSE INFORMATION</h3>  -->
+    <!-- <li>For all A level students</li>
+            <li>Improve problems solving skills</li>
+            <li>Created by Dave</li> -->
+    <!-- <script>
+                $(document).ready(function() {
+                    $("#owl-demo5").owlCarousel({
+
+                        autoPlay: 3000,
+
+                        items: 4,
+                        itemsDesktop: [640, 5],
+                        itemsDesktopSmall: [414, 4],
+                        navigation: true
+
+                    });
+
+                });
+            </script> -->
+    <!-- <div id="owl-demo5" class="owl-carousel">
+                <div class="item">
+                    <div class="glry-w3agile-grids agileits"> <a href="products1.html"><iframe width="1112" height="320.6" src="https://www.youtube.com/embed/videoseries?list=PLg2tfDG3Ww4vrstKAZ0dajHx_hq85P0G-" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
+                        <div class="view-caption agileits-w3layouts">
+                            <h4><a href="products1.html">Teaching a level maths</a></h4>
+
+                            <form action="#" method="post">
+                                <input type="hidden" name="cmd" value="_cart" />
+                                <input type="hidden" name="add" value="1" />
+                                <input type="hidden" name="w3ls_item" value="Women Sandal" />
+                                <input type="hidden" name="amount" value="20.00" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="glry-w3agile-grids agileits">
+                        <a href="products6.html"><iframe width="1120" height="360.2" src="https://www.youtube.com/embed/videoseries?list=PLb86fQcyLH4SaWg46PojVajJG-1mrkn3t" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
+                        <div class="view-caption agileits-w3layouts">
+                            <h4><a href="products6.html">Grade 12 maths</a></h4>
+                            <p>Lorem ipsum dolor sit amet consectetur</p>
+                            <form action="#" method="post">
+                                <input type="hidden" name="cmd" value="_cart" />
+                                <input type="hidden" name="add" value="1" />
+                                <input type="hidden" name="w3ls_item" value="Coffee Mug" />
+                                <input type="hidden" name="amount" value="14.00" />
+                                <button type="submit" class="w3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="glry-w3agile-grids agileits">
+                        <a href="products6.html"><iframe width="1120" height="360.2" src="https://www.youtube.com/embed/videoseries?list=PLbu_fGT0MPsv3zrIJ27JwTgNRCdBBhwnR" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
+                        <div class="view-caption agileits-w3layouts">
+                            <h4><a href="products6.html">JEE maths</a></h4> -->
+    <!-- <form action="#" method="post">
+                                <input type="hidden" name="cmd" value="_cart" />
+                                <input type="hidden" name="add" value="1" />
+                                <input type="hidden" name="w3ls_item" value="Teddy bear" />
+                                <input type="hidden" name="amount" value="20.00" />
+
+                            </form> -->
+    <!-- </div>
+                    </div>
+                </div> 
+            </div> -->
+    <!-- </div>
+    </div> -->
+</div>
+<div class="w3agile-ftr-top">
+    <div class="container">
+        <div class="ftr-toprow">
+            <div class="col-md-4 ftr-top-grids">
+                <div class="ftr-top-left">
+                    <i class="fa fa-list" aria-hidden="true"></i>
+                </div>
+                <div class="ftr-top-right">
+                    <h4>UP-TO-DATED LESSONS</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus justo ac </p>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="col-md-4 ftr-top-grids">
+                <div class="ftr-top-left">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                </div>
+                <div class="ftr-top-right">
+                    <h4>FEED BACK EVERY COURSE</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus justo ac </p>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="col-md-4 ftr-top-grids">
+                <div class="ftr-top-left">
+                    <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                </div>
+                <div class="ftr-top-right">
+                    <h4>HIGH QUALITY</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus justo ac </p>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+<div class="subscribe">
+    <div class="container">
+        <div class="col-md-6 social-icons w3-agile-icons">
+            <h4>Keep in touch</h4>
+            <ul>
+                <li>
+                    <a href="#" class="fa fa-facebook icon facebook"> </a>
+                </li>
+                <li>
+                    <a href="#" class="fa fa-twitter icon twitter"> </a>
+                </li>
+                <li>
+                    <a href="#" class="fa fa-google-plus icon googleplus"> </a>
+                </li>
+                <li>
+                    <a href="#" class="fa fa-dribbble icon twitter"> </a>
+                </li>
+                <li>
+                    <a href="#" class="fa fa-rss icon rss"> </a>
+                </li>
+            </ul>
+            <ul class="apps">
+                <li>
+                    <h4>Download Our app : </h4>
+                </li>
+                <li>
+                    <a href="#" class="fa fa-apple"></a>
+                </li>
+                <li>
+                    <a href="#" class="fa fa-windows"></a>
+                </li>
+                <li>
+                    <a href="#" class="fa fa-android"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-6 subscribe-right">
+            <h4>Sign up for email and get free lessons</h4>
+            <form action="#" method="post">
+                <input type="text" name="email" placeholder="Enter your Email..." required="">
+                <input type="submit" value="Subscribe">
+            </form>
+            <div class="clearfix"> </div>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+</div>`
 components.indexScreen = `
 <div class="banner">
 <div id="kb" class="carousel kb_elastic animate_text kb_wrapper" data-ride="carousel" data-interval="6000"
@@ -1034,7 +1348,7 @@ components.loginScreen = `    <div class="login-page">
     <div class="clearfix"> </div>
 </div>
 </div>`
-components.marketPlace = `    <div class="w3l-services">
+components.marketPlaceScreen = `    <div class="w3l-services">
 <div class="container">
     <h3 class="w3ls-title w3ls-title1">Marketplace</h3>
     <div class="services-row">
@@ -1428,7 +1742,7 @@ components.productScreen = `    <div class="products">
     <div class="col-md-9 product-w3ls-right">
         <!-- breadcrumbs -->
         <ol class="breadcrumb breadcrumb1">
-            <li><a href="index.html">Home</a></li>
+            <li><a>Home</a></li>
             <li class="active">Video</li>
         </ol>
         <div class="clearfix"> </div>
@@ -1437,14 +1751,14 @@ components.productScreen = `    <div class="products">
             <h4>Videos</h4>
             <!-- <ul>
                 <li class="dropdown head-dpdn">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Filter By<span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="#">Latest</a></li>
                         <li><a href="#">Popular</a></li>
                     </ul>
                 </li>
                 <li class="dropdown head-dpdn">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Brands<span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="#">Primary school</a></li>
                         <li><a href="#">Secondary school</a></li>
@@ -1513,7 +1827,7 @@ components.productScreen = `    <div class="products">
                     </div>
                 </div>
             </div> -->
-            <!-- <div class="col-md-3 product-grids">
+            <!-- <div class="col-md-12 product-grids">
                 <div class="agile-products">
                     <div class="new-tag">
                         <h6>New</h6>
@@ -1533,23 +1847,10 @@ components.productScreen = `    <div class="products">
                 </div>
             </div> -->
 
-            <div class="col-md-3 product-grids">
-                <!-- <div class="agile-products"> -->
-                <div class="new-tag">
-                    <h6>New</h6>
-                </div>
-                <a href="single.html"><iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLybg94GvOJ9FoGQeUMFZ4SWZsr30jlUYK" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
-                <!-- <div class="agile-product-text">
-                        <h5><a>Mr Khiem</a></h5> -->
-                <!-- <form action="#" method="post">
-                            <input type="hidden" name="cmd" value="_cart" />
-                            <input type="hidden" name="add" value="1" />
-                            <input type="hidden" name="w3ls_item" value="Digital Camera" />
-                            <input type="hidden" name="amount" value="80.00" />
-
-                        </form> -->
-                <!-- </div> -->
-                <!-- </div> -->
+            <div class="col-md-12 product-grids">
+            <div id="owl-demo5" class="card-deck">
+            
+            </div>
             </div>
 
 
@@ -1597,71 +1898,9 @@ components.productScreen = `    <div class="products">
         </div>
     </div>
     <div class="clearfix"> </div> -->
-    <div class="recommend">
-        <h3 class="w3ls-title">Our Recommendations </h3>
-        <script>
-            $(document).ready(function() {
-                $("#owl-demo5").owlCarousel({
-
-                    autoPlay: 3000,
-
-                    items: 4,
-                    itemsDesktop: [640, 5],
-                    itemsDesktopSmall: [414, 4],
-                    navigation: true
-
-                });
-
-            });
-        </script> -->
-        <div id="owl-demo5" class="owl-carousel">
-            <div class="item">
-                <div class="glry-w3agile-grids agileits"> <a href="products1.html"><iframe width="1112" height="320.6" src="https://www.youtube.com/embed/videoseries?list=PLg2tfDG3Ww4vrstKAZ0dajHx_hq85P0G-" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
-                    <div class="view-caption agileits-w3layouts">
-                        <h4><a href="products1.html">Teaching a level maths</a></h4>
-
-                        <form action="#" method="post">
-                            <input type="hidden" name="cmd" value="_cart" />
-                            <input type="hidden" name="add" value="1" />
-                            <input type="hidden" name="w3ls_item" value="Women Sandal" />
-                            <input type="hidden" name="amount" value="20.00" />
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="glry-w3agile-grids agileits">
-                    <a href="products6.html"><iframe width="1120" height="360.2" src="https://www.youtube.com/embed/videoseries?list=PLb86fQcyLH4SaWg46PojVajJG-1mrkn3t" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
-                    <div class="view-caption agileits-w3layouts">
-                        <h4><a href="products6.html">Grade 12 maths</a></h4>
-                        <p>Lorem ipsum dolor sit amet consectetur</p>
-                        <form action="#" method="post">
-                            <input type="hidden" name="cmd" value="_cart" />
-                            <input type="hidden" name="add" value="1" />
-                            <input type="hidden" name="w3ls_item" value="Coffee Mug" />
-                            <input type="hidden" name="amount" value="14.00" />
-                            <button type="submit" class="w3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="glry-w3agile-grids agileits">
-                    <a href="products6.html"><iframe width="1120" height="360.2" src="https://www.youtube.com/embed/videoseries?list=PLbu_fGT0MPsv3zrIJ27JwTgNRCdBBhwnR" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
-                    <div class="view-caption agileits-w3layouts">
-                        <h4><a href="products6.html">JEE maths</a></h4> -->
-                        <form action="#" method="post">
-                            <input type="hidden" name="cmd" value="_cart" />
-                            <input type="hidden" name="add" value="1" />
-                            <input type="hidden" name="w3ls_item" value="Teddy bear" />
-                            <input type="hidden" name="amount" value="20.00" />
-
-                        </form> -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
+        
+    
 </div>
 </div>
 <div class="w3agile-ftr-top">
@@ -1707,19 +1946,19 @@ components.productScreen = `    <div class="products">
         <h4>Keep in touch</h4>
         <ul>
             <li>
-                <a href="#" class="fa fa-facebook icon facebook"> </a>
+                <a  class="fa fa-facebook icon facebook"> </a>
             </li>
             <li>
-                <a href="#" class="fa fa-twitter icon twitter"> </a>
+                <a class="fa fa-twitter icon twitter"> </a>
             </li>
             <li>
-                <a href="#" class="fa fa-google-plus icon googleplus"> </a>
+                <a class="fa fa-google-plus icon googleplus"> </a>
             </li>
             <li>
-                <a href="#" class="fa fa-dribbble icon twitter"> </a>
+                <a  class="fa fa-dribbble icon twitter"> </a>
             </li>
             <li>
-                <a href="#" class="fa fa-rss icon rss"> </a>
+                <a  class="fa fa-rss icon rss"> </a>
             </li>
         </ul>
         <ul class="apps">

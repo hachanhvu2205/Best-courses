@@ -1,5 +1,5 @@
 window.onload = () => {
-    //view.setActiveScreen('registerScreen')
+    view.setActiveScreen('loginScreen')
     var firebaseConfig = {
         apiKey: "AIzaSyAf2tNJ98Ohw6coesk2e-7lhRA2sBZlh1g",
         authDomain: "project-of-the-course.firebaseapp.com",
@@ -22,7 +22,7 @@ window.onload = () => {
                     email: user.email
                 }
                 if (firebase.auth().currentUser.emailVerified) {
-                    view.setActiveScreen('indexScreen')
+                    view.setActiveScreen('productScreen')
                 }
             } else {
                 view.setActiveScreen('loginScreen')
