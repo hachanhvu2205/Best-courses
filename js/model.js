@@ -31,10 +31,11 @@ model.login = (email, password) => {
     })
 }
 
-model.search = (searchKey) => {
-    model.loadCourses()
-    const res = firebase.firestore().collection('courses').where('title', '==', searchKey).get()
-    model.currentCourse = getDataFromDocs(res.docs)[0]
+model.search = async (topic) => {
+    const res = await firebase.firestore().collection('courses').where('topic', '==', topic).get()
+    console.log(res)
+    model.listCourses = getDataFromDocs(res.docs)
+    model.currentCourse = model.listCourses[0]
 }
 model.loadCourses = async() => {
     const res = await firebase.firestore().collection('courses').get()
@@ -42,6 +43,23 @@ model.loadCourses = async() => {
     model.currentCourse = model.listCourses[0]
 }
 
+model.addCourse = (course) => {
+    const dataToCreate = {
+        createdAt: course.createdAt,
+        courseLink: course.courseLink,
+        image: course.image,
+        title: course.title,
+        topic: course.topic,
+        courseInfo: {
+            author: course.courseInfo.author,
+            time: course.courseInfo.time,
+            users: course.courseInfo.users
+        }
+    }
+    firebase.firestore().collection('course').add(dataToCreate).then ((res) => {
+
+    })
+}
 
 getDataFromDoc = (doc) => {
     let course = doc.data()
