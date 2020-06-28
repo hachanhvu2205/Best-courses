@@ -654,7 +654,11 @@ h3.w3ls-title {
 /*-- add-products --*/
 
 .w3ls-add-grids {
+<<<<<<< HEAD
     background: url(../images/e1.png)no-repeat 0px 0px;
+=======
+    background: url(../images/t1.jpg) center ;
+>>>>>>> cd81356b02833706c221d6bb18258e72a3c6fcfb
     background-size: cover;
     width: 32.5%;
     min-height: 250px;
