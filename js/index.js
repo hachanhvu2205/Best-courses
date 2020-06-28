@@ -14,36 +14,36 @@ window.onload = () => {
     firebase.initializeApp(firebaseConfig);
     //firebase.analytics();
     firebase.auth().onAuthStateChanged(user => {
-        if (user) {
-            console.log(user)
-            model.currentUser = {
-                displayName: user.displayName,
-                uid: user.uid,
-                email: user.email
+            if (user) {
+                console.log(user)
+                model.currentUser = {
+                    displayName: user.displayName,
+                    uid: user.uid,
+                    email: user.email
+                }
+                if (firebase.auth().currentUser.emailVerified) {
+                    view.setActiveScreen('indexScreen')
+                }
+            } else {
+                view.setActiveScreen('loginScreen')
             }
-            if (firebase.auth().currentUser.emailVerified) {
-                view.setActiveScreen('chatScreen')
-            }
-        } else {
-            view.setActiveScreen('loginScreen')
-        }
-    })
-    //firebase.auth().signOut()
-    
+        })
+        //firebase.auth().signOut()
+
 }
 
 let templateFunction = () => {
     const collectionName = 'users'
-    // get 1 document
+        // get 1 document
     const docId = '9cT7pAKdR6mLJeKfKDik'
     firebase.firestore().collection(collectionName).doc(docId).get().then(res => {
-        console.log (getDataFromDoc(res))
+        console.log(getDataFromDoc(res))
     }).catch(err => {
 
     })
 
     // get multiple document
-    firebase.firestore().collection(collectionName).where('name','==','Bich').get().then (res => {
+    firebase.firestore().collection(collectionName).where('name', '==', 'Bich').get().then(res => {
         console.log(getDataFromDocs(res.docs))
     })
 
@@ -51,7 +51,7 @@ let templateFunction = () => {
     const dataToUpdate = {
         name: 'Nam',
         age: 19,
-        phoneNumber: firebase.firestore.FieldValue.arrayUnion('090190202'),        
+        phoneNumber: firebase.firestore.FieldValue.arrayUnion('090190202'),
         phoneNumber: firebase.firestore.FieldValue.arrayRemove('090190202')
     }
     firebase.firestore().collection(collectionName).doc(docId).update(dataToUpdate).then(res => {
@@ -62,14 +62,14 @@ let templateFunction = () => {
 
     // create document
     const dataToCreate = {
-        name: 'Hoang',
-        age: 19,
-        phoneNumber: ["090900003"],
-        address: "Ha Noi"
-    }
-    // firebase.firestore().collection(collectionName).add(dataToCreate).then (res => {
-    //     console.log('Created')
-    // })
+            name: 'Hoang',
+            age: 19,
+            phoneNumber: ["090900003"],
+            address: "Ha Noi"
+        }
+        // firebase.firestore().collection(collectionName).add(dataToCreate).then (res => {
+        //     console.log('Created')
+        // })
 
     // delete document
 
@@ -89,9 +89,9 @@ getDataFromDocs = (docs) => {
     return docs.map(getDataFromDoc)
 }
 
-function learnMap () {
+function learnMap() {
     const array = [1, 2, 3, 4]
-    arr2 =[]
+    arr2 = []
     arr2 = array.map(x => x * 2)
     console.log(arr2)
     return arr2
