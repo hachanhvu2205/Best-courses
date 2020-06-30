@@ -393,52 +393,52 @@ components.indexScreen = `
 
 <div class="deals">
 <div class="container">
-    <h3 class="w3ls-title">DEALS OF THE DAY </h3>
+    <h3 class="w3ls-title">Subjects provided</h3>
     <div class="deals-row">
         <div class="col-md-3 focus-grid">
-            <a href="products.html" class="wthree-btn">
+            <a  class="wthree-btn">
                 <div class="focus-image"><i class="fa fa-calculator" aria-hidden="true"></i></div>
                 <h4 class="clrchg">Math</h4>
             </a>
         </div>
         <div class="col-md-3 focus-grid">
-            <a href="products.html" class="wthree-btn wthree1">
+            <a class="wthree-btn wthree1">
                 <div class="focus-image"><i class="fa fa-binoculars" aria-hidden="true"></i></div>
                 <h4 class="clrchg"> Physics</h4>
             </a>
         </div>
         <div class="col-md-3 focus-grid">
-            <a href="products4.html" class="wthree-btn wthree2">
+            <a  class="wthree-btn wthree2">
                 <div class="focus-image"><i class="fa fa-flask" aria-hidden="true"></i></div>
                 <h4 class="clrchg">Chemistry</h4>
             </a>
         </div>
         <div class="col-md-3 focus-grid">
-            <a href="products3.html" class="wthree-btn wthree3">
+            <a  class="wthree-btn wthree3">
                 <div class="focus-image"><i class="fa fa-comments-o" aria-hidden="true"></i></div>
                 <h4 class="clrchg">English</h4>
             </a>
         </div>
         <div class="col-md-2 focus-grid w3focus-grid-mdl">
-            <a href="products9.html" class="wthree-btn wthree3">
+            <a  class="wthree-btn wthree3">
                 <div class="focus-image"><i class="fa fa-laptop" aria-hidden="true"></i></div>
                 <h4 class="clrchg">Computer Science</h4>
             </a>
         </div>
         <div class="col-md-2 focus-grid w3focus-grid-mdl">
-            <a href="products1.html" class="wthree-btn wthree4">
+            <a  class="wthree-btn wthree4">
                 <div class="focus-image"><i class="fa fa-asterisk"></i></div>
                 <h4 class="clrchg">Biology</h4>
             </a>
         </div>
         <div class="col-md-2 focus-grid w3focus-grid-mdl">
-            <a href="products2.html" class="wthree-btn wthree2">
+            <a  class="wthree-btn wthree2">
                 <div class="focus-image"><i class="fa fa-book" aria-hidden="true"></i></div>
                 <h4 class="clrchg">History</h4>
             </a>
         </div>
         <div class="col-md-2 focus-grid w3focus-grid-mdl">
-            <a href="products5.html" class="wthree-btn wthree">
+            <a  class="wthree-btn wthree">
                 <div class="focus-image"><i class="fa fa-map" aria-hidden="true"></i></div>
                 <h4 class="clrchg">Geography</h4>
             </a>
@@ -1230,7 +1230,7 @@ components.loginScreen = `    <div class="login-page">
             <div class="error" id="error-email"></div>
             <input type="password" name="password" class="lock" placeholder="Password">
             <div class="error" id="error-password"></div>
-            <input type="submit" value="Login">
+            <input type="submit" value="Login" id="login">
             <div class="forgot-grid">
                 <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Remember me</label>
                 <div class="forgot">

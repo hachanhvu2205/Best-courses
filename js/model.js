@@ -27,7 +27,7 @@ model.login = ({ email, password }) => {
         if (!firebase.auth().currentUser.emailVerified) {
             alert("Please verify email")
         } else {
-            view.setActiveScreen('productScreen')
+            view.setActiveScreen('indexScreen')
         }
     }).catch((err) => {
         alert(err.message)
