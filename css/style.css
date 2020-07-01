@@ -4718,5 +4718,25 @@ p.sbmincart-empty-text {
     }
 }
 
+.custom-card {
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+}
+
+.custom-card .card-body {
+    padding: 20px;
+}
+
+.custom-card .card-title {
+    font-weight: bold;
+}
+
 
 /*-- //responsive-design --*/
+
+.error {
+    text-align: left;
+    color: red;
+    margin-bottom: 15px;
+}
