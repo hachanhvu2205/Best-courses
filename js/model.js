@@ -66,6 +66,23 @@ model.loadCourses = async(topic) => {
     model.currentCourse = model.listCourses[0]
 }
 
+model.addCourse = (course) => {
+    const dataToCreate = {
+        createdAt: course.createdAt,
+        courseLink: course.courseLink,
+        image: course.image,
+        title: course.title,
+        topic: course.topic,
+        courseInfo: {
+            author: course.courseInfo.author,
+            time: course.courseInfo.time,
+            users: course.courseInfo.users
+        }
+    }
+    firebase.firestore().collection('course').add(dataToCreate).then((res) => {
+
+    })
+}
 
 getDataFromDoc = (doc) => {
     let course = doc.data()
