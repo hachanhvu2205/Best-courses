@@ -39,9 +39,6 @@ model.checkRole = async() => {
     view.setActiveScreen(model.currentUser.role === 'teacher' ? 'teacherScreen' : 'indexScreen')
 
 }
-model.createCourse = (course) => {
-    firebase.firestore().collection('courses').add(course)
-}
 model.login = ({ email, password }) => {
     firebase.auth().signInWithEmailAndPassword(email, password).then((res) => {
         console.log(res)

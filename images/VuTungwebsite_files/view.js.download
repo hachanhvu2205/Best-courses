@@ -115,29 +115,6 @@ view.setActiveScreen = async(screenName) => {
             break
         case 'teacherScreen':
             document.getElementById('app').innerHTML = components.teacherScreen
-            const createCourseForm = document.getElementById('createCourse')
-            createCourseForm.addEventListener('submit', (e) => {
-                e.preventDefault()
-                const course = {
-                    courseInfo: {
-                        author: createCourseForm.author.value,
-                        time: createCourseForm.time.value,
-                        users: createCourseForm.users.value,
-                    },
-                    courseLink: createCourseForm.courseLink.value,
-                    createdAt: new Date().toISOString(),
-                    image: createCourseForm.image.value,
-                    title: createCourseForm.title.value,
-                    topic: createCourseForm.topic.value,
-                }
-                model.createCourse(course)
-                createCourseForm.image.value = ''
-                createCourseForm.title.value = ''
-                createCourseForm.topic.value = ''
-                createCourseForm.users.value = ''
-                createCourseForm.time.value = ''
-                createCourseForm.author.value = ''
-            })
             break
         case 'contactScreen':
             window.scrollTo({ top: 100, left: 100, behavior: 'smooth' });
