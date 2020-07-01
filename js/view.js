@@ -176,6 +176,7 @@ const contactUs = document.getElementById('contactUs')
 const returns = document.getElementById('returns')
 const FAQ = document.getElementById('FAQ')
 const bestCourse = document.getElementsByClassName('bestCourse')[0]
+const addCourse = document.getElementById('add-course')
 let courseId = ''
 const listenClickTopic = () => {
     for (let course of subject) {
@@ -190,6 +191,9 @@ const listenClickTopic = () => {
     })
     document.getElementById('logout-btn').addEventListener('click', (e) => {
         firebase.auth().signOut()
+    })
+    addCourse.addEventListener('click', (e) => {
+        view.setActiveScreen('teacherScreen')
     })
 }
 listenClickTopic()

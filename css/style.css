@@ -396,7 +396,7 @@ h3.w3ls-title {
     font-size: 2em;
     color: #000;
     margin: 1em 0;
-    font-family: 'Offside', cursive;
+    /* font-family: 'Offside', cursive; */
 }
 
 .welcome-grids {
