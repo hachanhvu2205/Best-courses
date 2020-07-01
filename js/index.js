@@ -22,7 +22,7 @@ window.onload = () => {
                     email: user.email
                 }
                 if (firebase.auth().currentUser.emailVerified) {
-                    view.setActiveScreen('productScreen')
+                    view.setActiveScreen('indexScreen')
                 }
             } else {
                 view.setActiveScreen('loginScreen')

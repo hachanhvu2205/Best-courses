@@ -1,5 +1,14 @@
 const view = {}
 view.setActiveScreen = async(screenName) => {
+    const subject = document.getElementsByClassName("redirect-course")
+    const aboutUs = document.getElementById('aboutUs')
+    const marketPlace = document.getElementById('marketPlace')
+    const coreValue = document.getElementById('coreValue')
+    const privacy = document.getElementById('privacy')
+    const contactUs = document.getElementById('contactUs')
+    const returns = document.getElementById('returns')
+    const FAQ = document.getElementById('FAQ')
+    const bestCourse = document.getElementsByClassName('bestCourse')
     switch (screenName) {
         case 'signUpScreen':
             document.getElementById('app').innerHTML = components.signUpScreen
@@ -48,45 +57,108 @@ view.setActiveScreen = async(screenName) => {
                 }
                 controller.login(formData)
             })
+            const login = document.getElementById('login')
+            login.addEventListener('click', (e) => {
+                view.setActiveScreen('indexScreen')
+            })
             break
-            // case 'indexScreen':
-            //     document.getElementById('app').innerHTML = components.indexScreen
-            //     const subject = document.getElementsByClassName("redirect-topic")
-            //     for (const course of subject) {
-            //         course.addEventListener('click', (e) => {
-            //             course.id
-            //             view.setActiveScreen('productScreen')
-            //         })
-            //     }
-            //     const contact = document.getElementsByClassName("contact")
-            //     contact.addEventListener('click', (e) => {
-            //         view.setActiveScreen('contactScreen')
-            //     })
+        case 'indexScreen':
+            document.getElementById('app').innerHTML = components.indexScreen
+            for (course of subject) {
+                course.addEventListener('click', (e) => {
+                    // course.id
+                    view.setActiveScreen('productScreen')
+                })
+            }
+
+            const contact = document.getElementById("contact")
+            contact.addEventListener('click', (e) => {
+                view.setActiveScreen('contactScreen')
+            })
+            contactUs.addEventListener('click', (e) => {
+                view.setActiveScreen('contactScreen')
+            })
+            aboutUs.addEventListener('click', (e) => {
+                view.setActiveScreen('aboutScreen')
+            })
+            marketPlace.addEventListener('click', (e) => {
+                view.setActiveScreen('marketPlaceScreen')
+            })
+            coreValue.addEventListener('click', (e) => {
+                view.setActiveScreen('valueScreen')
+            })
+            privacy.addEventListener('click', (e) => {
+                view.setActiveScreen('privacyScreen')
+            })
+            returns.addEventListener('click', (e) => {
+                view.setActiveScreen('loginScreen')
+            })
+            FAQ.addEventListener('click', (e) => {
+                view.setActiveScreen('faqScreen')
+            })
+            break
         case 'productScreen':
+
             document.getElementById('app').innerHTML = components.productScreen
             await model.loadCourses()
-            for (const oneCourse of model.listCourses) {
+            for (course of subject) {
+                course.addEventListener('click', (e) => {
+                    course.id
+                    view.setActiveScreen('productScreen')
+                })
+            }
+            document.querySelector('#owl-demo5').innerHTML = ""
+            for (oneCourse of model.listCourses) {
                 view.addCourse(oneCourse)
             }
+            bestCourse.addEventListener('click', (e) => {
+                view.setActiveScreen('indexScreen')
+            })
             break
         case `videoScreen`:
+            window.scrollTo({ top: 100, left: 100, behavior: 'smooth' });
             document.getElementById('app').innerHTML = components.videoScreen
             view.showCourse(model.currentCourse)
-                // w3ls.render();
+            w3ls.render();
 
-            // w3ls.cart.on('w3sb_checkout', function(evt) {
-            //     var items, len, i;
+            w3ls.cart.on('w3sb_checkout', function(evt) {
+                var items, len, i;
 
-            //     if (this.subtotal() > 0) {
-            //         items = this.items();
+                if (this.subtotal() > 0) {
+                    items = this.items();
 
-            //         for (i = 0, len = items.length; i < len; i++) {
-            //             items[i].set('shipping', 0);
-            //             items[i].set('shipping2', 0);
-            //         }
-            //     }
-            // });
+                    for (i = 0, len = items.length; i < len; i++) {
+                        items[i].set('shipping', 0);
+                        items[i].set('shipping2', 0);
+                    }
+                }
+            });
             break
+        case 'contactScreen':
+            window.scrollTo({ top: 100, left: 100, behavior: 'smooth' });
+            document.getElementById('app').innerHTML = components.contactScreen
+            break
+        case 'aboutScreen':
+            window.scrollTo({ top: 100, left: 100, behavior: 'smooth' });
+            document.getElementById('app').innerHTML = components.aboutScreen
+            break
+        case 'marketPlaceScreen':
+            window.scrollTo({ top: 100, left: 100, behavior: 'smooth' });
+            document.getElementById('app').innerHTML = components.marketPlaceScreen
+            break
+        case 'valueScreen':
+            window.scrollTo({ top: 100, left: 100, behavior: 'smooth' });
+            document.getElementById('app').innerHTML = components.valueScreen
+            break
+        case 'privacyScreen':
+            window.scrollTo({ top: 100, left: 100, behavior: 'smooth' });
+            document.getElementById('app').innerHTML = components.privacyScreen
+            break
+        case 'faqScreen':
+            window.scrollTo({ top: 100, left: 100, behavior: 'smooth' });
+            document.getElementById('app').innerHTML = components.faqScreen
+            break
+
     }
     view.addCourse = (course) => {
         const courseWrapper = document.createElement('div')
