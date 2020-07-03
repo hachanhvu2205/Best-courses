@@ -2220,7 +2220,7 @@ components.teacherScreen = `
     </div>
     <div class="form-group">
         <label for="exampleInputPassword1">Course topic</label>
-        <input type="text" name="topic  " class="form-control" id="exampleInputPassword1">
+        <input type="text" name="topic" class="form-control" id="exampleInputPassword1">
     </div>
     <div class="form-row">
         <div class="form-group col-md-6" style="padding-left:0">
