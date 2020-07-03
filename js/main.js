@@ -9,11 +9,12 @@ jQuery(document).ready(function($) {
         toggleNav();
     });
 
-    
+
     $('.has-children').children('a').on('click', function(event) {
         event.preventDefault();
         var selected = $(this);
         selected.next('ul').removeClass('is-hidden').end().parent('.has-children').parent('ul').addClass('move-out');
+        toggleNav();
     });
 
 

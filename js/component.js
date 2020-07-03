@@ -398,49 +398,49 @@ components.indexScreen = `
         <div class="col-md-3 focus-grid">
             <a  class="wthree-btn redirect-course">
                 <div class="focus-image"><i class="fa fa-calculator" aria-hidden="true"></i></div>
-                <h4 class="clrchg">Math</h4>
+                <h4 class="clrchg" id="MATH">Math</h4>
             </a>
         </div>
         <div class="col-md-3 focus-grid">
             <a class="wthree-btn wthree1 redirect-course">
                 <div class="focus-image"><i class="fa fa-binoculars" aria-hidden="true"></i></div>
-                <h4 class="clrchg"> Physics</h4>
+                <h4 class="clrchg" id="PHYSICS"> Physics</h4>
             </a>
         </div>
         <div class="col-md-3 focus-grid">
             <a  class="wthree-btn wthree2 redirect-course">
                 <div class="focus-image"><i class="fa fa-flask" aria-hidden="true"></i></div>
-                <h4 class="clrchg">Chemistry</h4>
+                <h4 class="clrchg" id="CHEMISTRY">Chemistry</h4>
             </a>
         </div>
         <div class="col-md-3 focus-grid">
             <a  class="wthree-btn wthree3 redirect-course">
                 <div class="focus-image"><i class="fa fa-comments-o" aria-hidden="true"></i></div>
-                <h4 class="clrchg">English</h4>
+                <h4 class="clrchg"id="ENGLISH">English</h4>
             </a>
         </div>
         <div class="col-md-2 focus-grid w3focus-grid-mdl">
             <a  class="wthree-btn wthree3 redirect-course">
                 <div class="focus-image"><i class="fa fa-laptop" aria-hidden="true"></i></div>
-                <h4 class="clrchg">Computer Science</h4>
+                <h4 class="clrchg" id="COMPUTER SCIENCE">Computer Science</h4>
             </a>
         </div>
         <div class="col-md-2 focus-grid w3focus-grid-mdl">
             <a  class="wthree-btn wthree4 redirect-course">
                 <div class="focus-image"><i class="fa fa-asterisk"></i></div>
-                <h4 class="clrchg">Biology</h4>
+                <h4 class="clrchg" id="BIOLOGY">Biology</h4>
             </a>
         </div>
         <div class="col-md-2 focus-grid w3focus-grid-mdl">
             <a  class="wthree-btn wthree2 redirect-course">
                 <div class="focus-image"><i class="fa fa-book" aria-hidden="true"></i></div>
-                <h4 class="clrchg">History</h4>
+                <h4 class="clrchg" id="HISTORY">History</h4>
             </a>
         </div>
         <div class="col-md-2 focus-grid w3focus-grid-mdl">
             <a  class="wthree-btn wthree redirect-course">
                 <div class="focus-image"><i class="fa fa-map" aria-hidden="true"></i></div>
-                <h4 class="clrchg">Geography</h4>
+                <h4 class="clrchg" id="GEOGRAPHY">Geography</h4>
             </a>
         </div>
         <div class="clearfix"> </div>

@@ -56,8 +56,57 @@ view.setActiveScreen = async(screenName) => {
             break
         case 'indexScreen':
             document.getElementById('app').innerHTML = components.indexScreen
+            $(document).ready(function() {
+                $('#countdown1').ClassyCountdown({
+                    end: '1388268325',
+                    now: '1387999995',
+                    labels: true,
+                    style: {
+                        element: "",
+                        textResponsive: .5,
+                        days: {
+                            gauge: {
+                                thickness: .10,
+                                bgColor: "rgba(0,0,0,0)",
+                                fgColor: "#1abc9c",
+                                lineCap: 'round'
+                            },
+                            textCSS: 'font-weight:300; color:#fff;'
+                        },
+                        hours: {
+                            gauge: {
+                                thickness: .10,
+                                bgColor: "rgba(0,0,0,0)",
+                                fgColor: "#05BEF6",
+                                lineCap: 'round'
+                            },
+                            textCSS: ' font-weight:300; color:#fff;'
+                        },
+                        minutes: {
+                            gauge: {
+                                thickness: .10,
+                                bgColor: "rgba(0,0,0,0)",
+                                fgColor: "#8e44ad",
+                                lineCap: 'round'
+                            },
+                            textCSS: ' font-weight:300; color:#fff;'
+                        },
+                        seconds: {
+                            gauge: {
+                                thickness: .10,
+                                bgColor: "rgba(0,0,0,0)",
+                                fgColor: "#f39c12",
+                                lineCap: 'round'
+                            },
+                            textCSS: ' font-weight:300; color:#fff;'
+                        }
 
-
+                    },
+                    onEndCallback: function() {
+                        console.log("Time out!");
+                    }
+                });
+            });
 
             break
         case 'productScreen':
@@ -153,23 +202,24 @@ const returns = document.getElementById('returns')
 const FAQ = document.getElementById('FAQ')
 const bestCourse = document.getElementsByClassName('bestCourse')[0]
 const addCourse = document.getElementById('add-course')
-const search = document.getElementsByClassName('header-search')[0]
+const search = document.getElementById('search')
+const clrchg = document.getElementsByClassName('clrchg')
 let courseId = ''
 flag = true
 const listenClickTopic = () => {
 
     for (let course of subject) {
         course.addEventListener('click', (e) => {
-            console.log(course)
+            // console.log(course)
             courseId = course.id
             view.setActiveScreen('productScreen')
-            if (flag == true) {
-                document.getElementsByClassName('cd-dropdown')[0].style = "display:none"
-                flag = false
-            } else {
-                document.getElementsByClassName('cd-dropdown')[0].style = "display:block"
-
-            }
+        })
+    }
+    for (let course1 of clrchg) {
+        course1.addEventListener('click', (e) => {
+            console.log(course)
+            courseId = course1.id.toLowerCase()
+            view.setActiveScreen('productScreen')
         })
     }
     search.addEventListener('submit', (e) => {
@@ -179,8 +229,6 @@ const listenClickTopic = () => {
 
     })
     document.getElementById('search-btn').addEventListener('click', (e) => {
-        e.preventDefault()
-
         view.setActiveScreen('productScreen')
     })
     const contact = document.getElementById("contact")
