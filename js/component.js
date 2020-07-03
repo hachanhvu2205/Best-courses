@@ -1878,14 +1878,14 @@ components.productScreen = `    <div class="products">
                 </div>
             </div> -->
             <div class="sidebar-row">
-                <h4>Time</h4>
+                <h4>Do you like it ?</h4>
                 <div class="row row1 scroll-pane">
-                    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Upto - 5h </label>
-                    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>4h-5h</label>
-                    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>3h-4h </label>
-                    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>1h-3h </label>
-                    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>30m-1h</label>
-                    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>below 30m </label>
+                    <label class="checkbox"><input type="radio" name="checkbox"><i></i>OK </label>
+                    <label class="checkbox"><input type="radio" name="checkbox"><i></i>VERY SATISFIED</label>
+                    <label class="checkbox"><input type="radio" name="checkbox"><i></i>SATISFIED </label>
+                    <label class="checkbox"><input type="radio" name="checkbox"><i></i>NOT OK </label>
+                    <label class="checkbox"><input type="radio" name="checkbox"><i></i>NEED IMPROVING</label>
+                    <label class="checkbox"><input type="radio" name="checkbox"><i></i>TRASH </label>
                 </div>
             </div>
         </div>

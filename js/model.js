@@ -57,6 +57,7 @@ model.login = ({ email, password }) => {
 
 model.search = async(searchKey) => {
     const res = await firebase.firestore().collection('courses').where('title', '==', searchKey).get()
+    model.listCourses = getDataFromDocs(res.docs)
     model.currentCourse = getDataFromDocs(res.docs)[0]
 }
 model.loadCourses = async(topic) => {

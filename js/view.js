@@ -58,37 +58,13 @@ view.setActiveScreen = async(screenName) => {
             document.getElementById('app').innerHTML = components.indexScreen
 
 
-            const contact = document.getElementById("contact")
-            contact.addEventListener('click', (e) => {
-                view.setActiveScreen('contactScreen')
-            })
-            contactUs.addEventListener('click', (e) => {
-                view.setActiveScreen('contactScreen')
-            })
-            aboutUs.addEventListener('click', (e) => {
-                view.setActiveScreen('aboutScreen')
-            })
-            marketPlace.addEventListener('click', (e) => {
-                view.setActiveScreen('marketPlaceScreen')
-            })
-            coreValue.addEventListener('click', (e) => {
-                view.setActiveScreen('valueScreen')
-            })
-            privacy.addEventListener('click', (e) => {
-                view.setActiveScreen('privacyScreen')
-            })
-            returns.addEventListener('click', (e) => {
-                view.setActiveScreen('loginScreen')
-            })
-            FAQ.addEventListener('click', (e) => {
-                view.setActiveScreen('faqScreen')
-            })
+
             break
         case 'productScreen':
 
             document.getElementById('app').innerHTML = components.productScreen
             await model.loadCourses(courseId)
-
+                // await model.search(searchKey)
             document.querySelector('#owl-demo5').innerHTML = ""
             for (oneCourse of model.listCourses) {
                 view.addCourse(oneCourse)
@@ -177,15 +153,61 @@ const returns = document.getElementById('returns')
 const FAQ = document.getElementById('FAQ')
 const bestCourse = document.getElementsByClassName('bestCourse')[0]
 const addCourse = document.getElementById('add-course')
+const search = document.getElementsByClassName('header-search')[0]
 let courseId = ''
+flag = true
 const listenClickTopic = () => {
+
     for (let course of subject) {
         course.addEventListener('click', (e) => {
             console.log(course)
             courseId = course.id
             view.setActiveScreen('productScreen')
+            if (flag == true) {
+                document.getElementsByClassName('cd-dropdown')[0].style = "display:none"
+                flag = false
+            } else {
+                document.getElementsByClassName('cd-dropdown')[0].style = "display:block"
+
+            }
         })
     }
+    search.addEventListener('submit', (e) => {
+        e.preventDefault()
+        const searchKey = search.search.value
+        console.log(searchKey)
+
+    })
+    document.getElementById('search-btn').addEventListener('click', (e) => {
+        e.preventDefault()
+
+        view.setActiveScreen('productScreen')
+    })
+    const contact = document.getElementById("contact")
+    contact.addEventListener('click', (e) => {
+        view.setActiveScreen('contactScreen')
+    })
+    contactUs.addEventListener('click', (e) => {
+        view.setActiveScreen('contactScreen')
+    })
+    aboutUs.addEventListener('click', (e) => {
+        view.setActiveScreen('aboutScreen')
+    })
+    marketPlace.addEventListener('click', (e) => {
+        view.setActiveScreen('marketPlaceScreen')
+    })
+    coreValue.addEventListener('click', (e) => {
+        view.setActiveScreen('valueScreen')
+    })
+    privacy.addEventListener('click', (e) => {
+        view.setActiveScreen('privacyScreen')
+    })
+    returns.addEventListener('click', (e) => {
+        view.setActiveScreen('loginScreen')
+    })
+    FAQ.addEventListener('click', (e) => {
+        view.setActiveScreen('faqScreen')
+    })
     bestCourse.addEventListener('click', (e) => {
         view.setActiveScreen('indexScreen')
     })
@@ -195,6 +217,7 @@ const listenClickTopic = () => {
     addCourse.addEventListener('click', (e) => {
         view.setActiveScreen('teacherScreen')
     })
+
 }
 listenClickTopic()
 
